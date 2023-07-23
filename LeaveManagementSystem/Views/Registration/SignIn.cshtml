@@ -1,0 +1,35 @@
+﻿@model LeaveManagementSystem.Models.ViewModels.UsersViewModels
+@{
+    ViewBag.Title = "SignIn";
+}
+
+<div class="wrapper">
+    <div class="container main">
+        <div class="row">
+            <div class="col-md-6 side-image">
+                <img src="~/images/LMS_Signin.png" alt="">
+            </div>
+            <div class="col-md-6 right">
+                <div class="input-box">
+                    <h3 class="fw-bold text-primary">Leave Management</h3>
+                    <h3 class="fw-bold text-primary">System</h3><br />
+                    <form asp-action="SignIn" method="post">
+                    <div class="input-field">
+                        <input asp-for="NewUser.Email" type="text" class="input" id="email" required autocomplete="off">
+                        <label asp-for="NewUser.Email"  for="email">Email</label>
+                    </div>
+                    <div class="input-field">
+                        <input asp-for="NewUser.Password" type="password" class="input" id="password" required>
+                        <label asp-for="NewUser.Password" for="password">Password</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="submit" class="submit" id="SignIn" value="Sign In">
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
